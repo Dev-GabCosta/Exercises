@@ -1,4 +1,4 @@
-package exercise1;
+package exercise3;
 
 import java.util.Scanner;
 
@@ -7,13 +7,14 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Insira um número:");
 		int number = scanner.nextInt();
-		int sum = 0;
+		int count = 0;
 
-		for (int i = 1; i <= number; i++) {
-			sum += i;
+		while (number > 0) {
+			number /= 10;
+			count++;
 		}
 
-		System.out.println("O resultado da soma dos números de 1 até " + number + " é " + sum);
+		System.out.println("Esse número possui " + count + " dígitos");
 		scanner.close();
 	}
 }
